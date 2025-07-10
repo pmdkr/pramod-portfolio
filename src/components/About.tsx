@@ -1,27 +1,21 @@
-
 import React from 'react';
-import { User, Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
 
 const About = () => {
   const timeline = [
     {
-      year: "2024 - Present",
-      title: "Senior Software Developer",
-      company: "Tech Solutions Inc.",
+      year: "May, 2024 - Present",
+      title: "Software Developer",
+      company: "Nathcorp Inc.",
       description: "Leading development teams and architecting scalable solutions for enterprise clients."
     },
     {
-      year: "2022 - 2024",
-      title: "Full Stack Developer",
-      company: "Innovation Labs",
+      year: "June, 2022 - April, 2024",
+      title: "Associate Software Engineer",
+      company: "Nathcorp Inc.",
       description: "Developed end-to-end web applications using modern technologies and frameworks."
     },
-    {
-      year: "2021 - 2022",
-      title: "Junior Software Developer",
-      company: "StartUp Hub",
-      description: "Started my journey in software development, focusing on frontend technologies and user experience."
-    }
+   
   ];
 
   return (
@@ -33,28 +27,36 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
         </div>
-        
+
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <div className="w-64 h-64 mx-auto bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-              <User size={96} className="text-indigo-400" />
+            <div className="w-64 h-64 mx-auto bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm overflow-hidden">
+              <img
+                src="/public/image2.JPG"
+                alt="Profile"
+                className="w-full h-full object-cover object-top  rounded-2xl"
+                onError={(e) => {
+                  // Fallback to placeholder if image fails to load
+                  e.currentTarget.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face";
+                }}
+              />
             </div>
-            
+
             <div className="space-y-6 text-gray-300">
               <h3 className="text-2xl font-semibold text-white">
                 Passionate Software Developer
               </h3>
               <p className="text-lg leading-relaxed">
-                With 3 years of hands-on experience in software development, I specialize in creating 
-                robust, scalable applications that solve real-world problems. My journey has been 
+                With 3 years of hands-on experience in software development, I specialize in creating
+                robust, scalable applications that solve real-world problems. My journey has been
                 focused on delivering high-quality code and exceptional user experiences.
               </p>
               <p className="text-lg leading-relaxed">
-                I thrive in collaborative environments and am always eager to learn new technologies 
-                and tackle challenging projects. My experience spans across various domains, from 
+                I thrive in collaborative environments and am always eager to learn new technologies
+                and tackle challenging projects. My experience spans across various domains, from
                 web development to system architecture.
               </p>
-              
+
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center p-4 bg-white/5 rounded-lg backdrop-blur-sm">
                   <div className="text-3xl font-bold text-indigo-400">3+</div>
@@ -67,20 +69,20 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="space-y-6">
             <div className="flex items-center gap-3 mb-8">
               <Briefcase className="text-indigo-400" size={28} />
               <h3 className="text-2xl font-semibold text-white">Career Timeline</h3>
             </div>
-            
+
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 to-purple-500"></div>
-              
+
               {timeline.map((item, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="relative flex items-start gap-6 pb-8 animate-fade-in"
                   style={{ animationDelay: `${index * 200}ms` }}
                 >
@@ -88,7 +90,7 @@ const About = () => {
                   <div className="relative z-10 w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
                     <Calendar size={20} className="text-white" />
                   </div>
-                  
+
                   {/* Content */}
                   <div className="flex-1 bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 group">
                     <div className="flex items-center gap-2 mb-3">

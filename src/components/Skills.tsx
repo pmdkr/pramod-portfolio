@@ -1,23 +1,43 @@
-
 import React from 'react';
-import { Code, Layout, FileText } from 'lucide-react';
+import { Code, Layout, FileText, Zap, Database, Globe, Palette, Server, Cloud, GitBranch, Container, TestTube } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
       icon: Layout,
-      skills: ["React.js", "Vue.js", "JavaScript/TypeScript", "HTML5/CSS3", "Tailwind CSS", "Responsive Design"]
+      skills: [
+        { name: "React.js", icon: Zap },
+        { name: "JavaScript", icon: Globe },
+        { name: "TypeScript", icon: Code },
+        { name: "HTML5/CSS3", icon: FileText },
+        { name: "Tailwind CSS", icon: Palette },
+        { name: "Responsive Design", icon: Layout }
+      ]
     },
     {
       title: "Backend Development", 
       icon: Code,
-      skills: ["Node.js", "Python", "RESTful APIs", "Database Design", "MongoDB", "PostgreSQL"]
+      skills: [
+        { name: "Node.js", icon: Server },
+        { name: "Python", icon: Code },
+        { name: "RESTful APIs", icon: Globe },
+        { name: "Database Design", icon: Database },
+        { name: "MongoDB", icon: Database },
+        { name: "PostgreSQL", icon: Database }
+      ]
     },
     {
       title: "Tools & Technologies",
       icon: FileText,
-      skills: ["Git/GitHub", "Docker", "AWS", "CI/CD", "Agile/Scrum", "Testing Frameworks"]
+      skills: [
+        { name: "Git/GitHub", icon: GitBranch },
+        { name: "Docker", icon: Container },
+        { name: "AWS", icon: Cloud },
+        { name: "CI/CD", icon: Zap },
+        { name: "Agile/Scrum", icon: Globe },
+        { name: "Testing Frameworks", icon: TestTube }
+      ]
     }
   ];
 
@@ -48,11 +68,16 @@ const Skills = () => {
               <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
-                    key={skill}
+                    key={skill.name}
                     className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-300 group/skill animate-fade-in"
                     style={{ animationDelay: `${(index * 200) + (skillIndex * 100)}ms` }}
                   >
-                    <span className="text-gray-300 group-hover/skill:text-white transition-colors duration-300">{skill}</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-lg flex items-center justify-center group-hover/skill:rotate-12 transition-transform duration-300">
+                        <skill.icon size={16} className="text-white" />
+                      </div>
+                      <span className="text-gray-300 group-hover/skill:text-white transition-colors duration-300">{skill.name}</span>
+                    </div>
                     <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full group-hover/skill:animate-ping"></div>
                   </div>
                 ))}

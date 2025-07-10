@@ -5,7 +5,7 @@ import { Link2, Code } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Dev Tinder",
       description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
       tech: ["React", "Node.js", "MongoDB", "Stripe API"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
@@ -13,7 +13,7 @@ const Projects = () => {
       live: "#"
     },
     {
-      title: "Task Management App",
+      title: "Netflix-GPT",
       description: "Collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       tech: ["Vue.js", "Express.js", "Socket.io", "PostgreSQL"],
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop",
@@ -21,7 +21,7 @@ const Projects = () => {
       live: "#"
     },
     {
-      title: "Analytics Dashboard",
+      title: "VideoHub",
       description: "Data visualization dashboard with interactive charts, real-time data processing, and customizable reports for business intelligence.",
       tech: ["React", "D3.js", "Python", "FastAPI"],
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",

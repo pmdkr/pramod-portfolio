@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, FileText, ArrowDown, Download } from 'lucide-react';
+import { FileText, ArrowDown, Download } from 'lucide-react';
 import ParticleNetwork from './ParticleNetwork';
 
 const Hero = () => {
@@ -26,10 +26,19 @@ const Hero = () => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-indigo-400/10 to-purple-300/10 rounded-full blur-2xl animate-ping" style={{ animationDelay: '2000ms' }}></div>
       
       <div className="text-center z-10 max-w-4xl mx-auto relative">
-        {/* logo and titles */}
+        {/* logo and profile photo */}
         <div className="mb-8 animate-fade-in">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:rotate-12 animate-bounce" style={{ animationDuration: '3s' }}>
-            <Code size={48} className="text-white animate-pulse" />
+          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:rotate-12 animate-bounce overflow-hidden" style={{ animationDuration: '3s' }}>
+            <img 
+              src="/public/imge.jpg" 
+              alt="Pramod Lohra" 
+              className="w-full h-full object-cover rounded-full"
+              onError={(e) => {
+                // Fallback to a placeholder if image fails to load
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white text-2xl font-bold">PL</div>';
+              }}
+            />
           </div>
         </div>
         
@@ -59,7 +68,7 @@ const Hero = () => {
         </h2>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in" style={{ animationDelay: '400ms' }}>
-          <span className="bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent font-semibold">
+          <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent font-semibold">
             3+ Years
           </span> of Experience Building Amazing Digital Solutions
         </p>
