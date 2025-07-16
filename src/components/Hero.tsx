@@ -28,7 +28,7 @@ const Hero = () => {
       <div className="text-center z-10 max-w-4xl mx-auto relative">
         {/* logo and profile photo */}
         <div className="mb-8 animate-fade-in">
-          <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:rotate-12 animate-bounce overflow-hidden" style={{ animationDuration: '3s' }}>
+          <div className="w-48 h-48 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-500 hover:rotate-12 animate-bounce overflow-hidden" style={{ animationDuration: '3s' }}>
             <img 
               src="/public/imge.jpg" 
               alt="Pramod Lohra" 
