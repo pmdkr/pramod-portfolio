@@ -12,7 +12,7 @@ const Hero = () => {
 
   const handleResumeDownload = () => {
     // Replace this URL with your actual Google Drive resume link
-    window.open('https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing', '_blank');
+    window.open('https://drive.google.com/file/d/1rWsKHWHm7HRQkZRi4981ghXY_1e4lDjA/view?usp=sharing', '_blank');
   };
 
   return (
