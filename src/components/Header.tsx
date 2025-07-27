@@ -31,10 +31,9 @@ const Header = () => {
   ];
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        }`}
     >
       <nav className="max-w-6xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -74,10 +73,9 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div 
-          className={`md:hidden transition-all duration-300 overflow-hidden ${
-            isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
-          }`}
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+            }`}
         >
           <div className="py-4 space-y-2 animate-fade-in">
             {navItems.map((item, index) => (

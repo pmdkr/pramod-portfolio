@@ -47,28 +47,28 @@ const Projects = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={project.title}
               className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech) => (
-                    <span 
+                    <span
                       key={tech}
                       className="px-3 py-1 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-300 rounded-full text-sm"
                     >
@@ -76,16 +76,16 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4">
-                  <a 
+                  <a
                     href={project.github}
                     className="flex items-center gap-2 px-4 py-2 border border-indigo-400 text-indigo-400 rounded-lg hover:bg-indigo-400 hover:text-white transition-colors duration-200"
                   >
                     <Code size={16} />
                     Code
                   </a>
-                  <a 
+                  <a
                     href={project.live}
                     className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg hover:scale-105 transition-transform duration-200"
                   >

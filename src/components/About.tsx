@@ -32,7 +32,7 @@ const About = () => {
           <div className="space-y-6">
             <div className="w-64 h-64 mx-auto bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center backdrop-blur-sm overflow-hidden">
               <img
-                src="/public/image2.JPG"
+                src="/image2.JPG"
                 alt="Profile"
                 className="w-full h-full object-cover object-top  rounded-2xl"
                 onError={(e) => {
