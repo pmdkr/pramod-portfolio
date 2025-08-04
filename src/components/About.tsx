@@ -5,7 +5,7 @@ const About = () => {
   const timeline = [
     {
       year: "May, 2024 - Present",
-      title: "Software Developer",
+      title: "Software Engineer",
       company: "Nathcorp Inc.",
       description: "Leading development teams and architecting scalable solutions for enterprise clients."
     },

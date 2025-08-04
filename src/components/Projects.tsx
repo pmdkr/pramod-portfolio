@@ -5,8 +5,8 @@ import { Link2, Code } from 'lucide-react';
 const Projects = () => {
   const projects = [
     {
-      title: "Dev Tinder",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment integration, and admin dashboard.",
+      title: "DevTinder – Developer Matchmaking App",
+      description: "A MERN stack Tinder clone for developers with features like friend requests, real-time chat, notifications, and payment integration.",
       tech: ["React", "Node.js", "MongoDB", "Stripe API"],
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
       github: "#",
@@ -21,8 +21,8 @@ const Projects = () => {
       live: "#"
     },
     {
-      title: "VideoHub",
-      description: "Data visualization dashboard with interactive charts, real-time data processing, and customizable reports for business intelligence.",
+      title: "VideoHUB – Video Upload & Streaming App",
+      description: "A MERN stack application to upload and stream videos directly from AWS S3, mimicking a modern video platform with secure storage and smooth playback.",
       tech: ["React", "D3.js", "Python", "FastAPI"],
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
       github: "#",

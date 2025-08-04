@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
-import { Users, Code, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
+import { Users, Code, Facebook, Instagram, Linkedin, Twitter, Youtube, Phone } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,7 +14,19 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    
+    // Show success toast
+    toast({
+      title: "Message Sent! 🚀",
+      description: "Your message has been sent to Pramod. He'll get back to you soon!",
+    });
+
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      message: ''
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -79,7 +93,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
                 <Users size={32} className="mx-auto mb-3 text-indigo-400" />
                 <div className="text-white font-semibold">Available for</div>
@@ -89,6 +103,11 @@ const Contact = () => {
                 <Code size={32} className="mx-auto mb-3 text-purple-400" />
                 <div className="text-white font-semibold">Response Time</div>
                 <div className="text-gray-400 text-sm">Within 24 hours</div>
+              </div>
+              <div className="text-center p-6 bg-white/5 rounded-lg backdrop-blur-sm">
+                <Phone size={32} className="mx-auto mb-3 text-green-400" />
+                <div className="text-white font-semibold">Phone</div>
+                <div className="text-gray-400 text-sm">+91 82102 79313</div>
               </div>
             </div>
           </div>

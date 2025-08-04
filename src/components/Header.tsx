@@ -40,7 +40,7 @@ const Header = () => {
           {/* Logo */}
           <div className="text-2xl font-bold text-white animate-fade-in">
             <span className="bg-gradient-to-r from-indigo-corporate-400 to-purple-corporate-500 bg-clip-text text-transparent">
-              Pramod | Software Engineer
+              Pramod
             </span>
           </div>
 
